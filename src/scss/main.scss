@@ -1,0 +1,141 @@
+@import "./color.scss";
+@import "./font.scss";
+
+* {
+  font-family: $font-family;
+  margin: 0;
+}
+html {
+  font-family: $font-family;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: $font-family;
+  background-color: $grey-color;
+}
+
+
+// scss helpers =================================================================
+
+.p-divider.p-divider-horizontal{
+  margin: 10px !important;
+  padding: 0 !important;
+}
+
+// ============= app layout =============================
+.main {
+  width: 100%;
+  height: 100%;
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .nav-container {
+      height: 60px;
+      background-color: #fff;
+    }
+    .page-content {
+      width: 100%;
+      height: 100vh;
+      background-color: transparent;
+      .content-view {
+        margin: 0 20px;
+        padding: 20px;
+        background-color: #fff;
+      }
+    }
+    .footer-section {
+      height: 50px;
+      text-align: center;
+    }
+  }
+}
+
+// ============ nav bar =============================
+.nav-bar-container {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  .menus-sidebar-icon {
+    .icon-bar-btn {
+      background-color: #fff;
+      color: $black-color;
+      border: none;
+      cursor: pointer;
+      &:hover {
+        background-color: #fff;
+        color: $black-color;
+      }
+      &:focus {
+        border: none !important;
+        outline: 0;
+      }
+    }
+  }
+}
+
+.p-sidebar-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+  align-items: center;
+  .app-logo-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    i.pi-shopping-bag {
+      font-size: 30px;
+      color: $primary-green;
+      font-weight: 600;
+    }
+    span.app-title {
+      font-size: 20px;
+      font-weight: 400;
+      color: $primary-green;
+    }
+  }
+}
+
+.p-sidebar-content {
+  padding: 0 10px !important;
+  height: 100vh;
+  .side-bar-menus {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+    .side-bar-main-menus {
+      
+    }
+    .side-bar-account{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 15px;
+      align-items: center;
+
+      .user-name-status{
+      display: flex;
+      flex-direction: column;
+      span.name{
+        font-size: 16px;
+        font-weight: 300;
+        color: $black-color;
+      }
+      span.status{
+        font-size: 12px;
+        font-weight: 300;
+        color:$grey-dark;
+      }
+      }
+    }
+  }
+}
